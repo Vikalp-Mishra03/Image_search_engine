@@ -4,3 +4,14 @@
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
+
+body{
+    background: #39297b;
+    color: #fff;
+}
+
+h1{
+    text-align: center;
+    margin: 100px auto 50px;
+    font-weight: 600;
+}
