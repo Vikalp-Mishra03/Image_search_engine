@@ -66,3 +66,11 @@ form button{
     cursor: pointer;
     display: none;
 }
+
+#search-result{
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+}
