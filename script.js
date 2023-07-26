@@ -10,7 +10,7 @@ let page = 1;
 
 async function searchImages() {
     keyword = searchBox.value;
-    const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}`;
+    const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=12`;
 
     const response = await fetch(url)
     const data = await response.json()
@@ -25,17 +25,7 @@ async function searchImages() {
         imageLink.appendChild(image)
         searchResult.appendChild(imageLink)
     })
-    // try {
-    //     const response = await fetch(url);
-    //     if (!response.ok) {
-    //         throw new Error("Network response was not ok");
-    //     }
-    //     const data = await response.json();
-    //     console.log(data);
-    //     // Do something with the data, like displaying images in the searchResult div
-    // } catch (error) {
-    //     console.error("Error fetching images:", error);
-    // }
+    showMoreBtn.style.display = "block"
 }
 
 searchForm.addEventListener("submit", (e) => {
